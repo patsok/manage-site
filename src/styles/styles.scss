@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+}
+
+$primary-color: #F3603C;
+$secondary-color: #242D52;
+$text-color: #1D1E25;
+$accent-color: #FFF0EC;
+$button-color: #FCF6F5;
+
+@import "./nav";
