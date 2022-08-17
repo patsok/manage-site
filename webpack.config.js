@@ -6,17 +6,18 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: {
       index: './src/index.js',
+      swiper: './src/swiper.js',
     },
     output: {
-        filename: 'index.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
         static: './dist',
     },
-  //   optimization: {
-  //     runtimeChunk: 'single'
-  // },
+    optimization: {
+      runtimeChunk: 'single'
+  },
     plugins: [
       new HtmlWebpackPlugin({
         template: "./src/index.html"
@@ -26,6 +27,10 @@ module.exports = {
         rules: [{
             test: /\.s[ac]ss$/i,
             use: ["style-loader", "css-loader", "sass-loader"]
+            },
+            {
+              test: /\.css$/i,
+              use: ['style-loader', 'css-loader'],
             },
             {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
