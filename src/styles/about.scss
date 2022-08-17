@@ -1,9 +1,10 @@
 .about{
     display: flex;
-    padding: 64px clamp(24px,9vw,165px);
+    @include section-padding(60px);
     color: $secondary-color;
     font-family: $font-stack;
     gap:32px;
+    position: relative;
     
     .about-left{
         width: 50%;
@@ -88,5 +89,15 @@
                 }
             }
         }
+    }
+}
+
+.accent-img{
+
+    &.sub-about{
+        opacity: 1;
+        right: 1150px;
+        top: 250px;
+        z-index: -5;
     }
 }

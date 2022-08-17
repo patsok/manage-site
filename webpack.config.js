@@ -7,6 +7,7 @@ module.exports = {
     entry: {
       index: './src/index.js',
       swiper: './src/swiper.js',
+      footer: './src/footer.js',
     },
     output: {
         filename: '[name].js',
