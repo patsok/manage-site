@@ -1,100 +1,121 @@
-.about{
+#about {
     display: flex;
-    @include section-padding(60px);
     color: $secondary-color;
-    font-family: $font-stack;
-    gap:32px;
+    gap: 32px;
     position: relative;
-    
-    .about-left{
+
+    .about-left {
         width: 50%;
-        h2{
+
+        h2 {
             font-weight: 700;
-            font-size: 40px;
+            font-size: clamp(30px, 3vw, 40px);
             line-height: 44px;
             letter-spacing: -0.714286px;
             padding-bottom: 24px;
             max-width: 16ch;
         }
-        p{
+
+        p {
             font-weight: 400;
-            font-size: 16px;
+            font-size: clamp(14px, 3vw, 16px);
             line-height: 26px;
             opacity: 0.5;
+            padding-bottom: 28px;
             max-width: 32ch;
         }
     }
-    .about-right{
+
+    .about-right {
         width: 50%;
 
-        .about-card{
+        .about-card {
             display: grid;
             grid-template-columns: 70px 1fr;
-            align-items: center;
-            gap:28px;
+            gap: 28px;
             padding-bottom: 40px;
-                .about-number{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: $primary-color;
-                    color: $button-color;
-                    border-radius: 22px;
-                    font-family: $font-stack;
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 23px;
-                    letter-spacing: -0.285714px;
-                    width: 67px;
-                    height: 39px;
-                }
-                h3{
-                    grid-area: 1/2/2/3;
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 23px;
-                }
-                p{
-                    margin-top: -10px;
-                    grid-area: 2/2/3/3;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 26px;
-                    opacity: 0.5;
-                    // max-width: 41ch;
-                }
-            
+
+            .about-heading {
+                grid-area: 1/1/2/3;
+                display: flex;
+                align-items: center;
+                gap: 28px;
+                border-radius: 22px;
+            }
+
+            .about-number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary-color;
+                color: $button-text-color;
+                border-radius: 22px;
+                font-family: $font-stack;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: -0.285714px;
+                min-width: 67px;
+                height: 39px;
+            }
+
+            h3 {
+                grid-area: 1/2/2/3;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: -0.285714px;
+            }
+
+            p {
+                margin-top: -10px;
+                grid-area: 2/2/3/3;
+                font-weight: 400;
+                font-size: clamp(14px, 3vw, 16px);
+                line-height: 26px;
+                opacity: 0.5;
+            }
+
         }
     }
 }
 
 
-@media only screen and (max-width:768px){
-    .about{
+@media only screen and (max-width:768px) {
+    #about {
         flex-direction: column;
         align-items: center;
 
-        .about-left{
+
+        .about-left {
             width: 100%;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .about-right{
+
+        .about-right {
             width: 100%;
-            .about-card{
-                p{
+
+            .about-card {
+                p {
                     grid-area: 2/1/3/3;
+                }
+
+                .about-heading {
+                    background-color: #FFF0EC;
+                    gap: 16px;
                 }
             }
         }
     }
 }
 
-.accent-img{
+.accent-img {
+    @extend %accent-image;
 
-    &.sub-about{
+    &.sub-about {
         opacity: 1;
         right: 1150px;
         top: 250px;

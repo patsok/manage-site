@@ -1,87 +1,63 @@
-.header {
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include section-padding(60px);
-    font-family: $font-stack;
     color: $secondary-color;
+    position: relative;
 
     .header-left {
         display: flex;
         flex-direction: column;
-    }
+        width: 50%;
 
-    h1 {
-        font-weight: 700;
-        font-size: clamp(40px, 5vw, 56px);
-        line-height: clamp(50px, 5vw, 64px);
-        letter-spacing: -1px;
-        max-width: 16ch;
-        padding-bottom: 16px;
-    }
+        h1 {
+            font-weight: 700;
+            font-size: clamp(40px, 4vw, 56px);
+            line-height: clamp(50px, 5vw, 64px);
+            letter-spacing: -1px;
+            max-width: 16ch;
+            padding-bottom: 16px;
+        }
 
-    p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        opacity: 0.5;
-        max-width: 32ch;
-        padding-bottom: 40px;
-    }
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            opacity: 0.5;
+            max-width: 32ch;
+            padding-bottom: 40px;
+        }
 
-    .button {
-        @extend %button-design;
-        justify-self: start;
-        width: fit-content;
+        .button {
+            @extend %button-design;
+            justify-self: start;
+            width: fit-content;
+        }
     }
 
     .header-right {
         max-width: 540px;
-        width: 100%;
+        width: 50%;
     }
 }
 
 @media only screen and (max-width:768px) {
-    .header {
+    #header {
         text-align: center;
         flex-direction: column-reverse;
+        padding-top: 32px;
 
         .header-left {
             align-items: center;
+            width: 100%;
+
+            .button {
+                align-self: center;
+            }
         }
 
-        .button {
-            align-self: center;
+        .header-right {
+            width: 100%;
         }
-    }
-
-    body .accent-img {
-        width: 244px;
-        height: 542px;
-
-        &.sub-header {
-            top: -100px;
-            right: -50px;
-        }
-    }
-}
-
-body {
-    position: relative;
-}
-
-.accent-img {
-    position: absolute;
-    width: 436px;
-    height: 970px;
-    background: #FFF0EC;
-    border-radius: 272px;
-    transform: rotate(45deg);
-
-    &.sub-header {
-        opacity: 1;
-        right: 25px;
-        top: -243.1px;
-        z-index: -5;
     }
 }
