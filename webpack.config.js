@@ -5,9 +5,10 @@ module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
     entry: {
-      index: './src/index.js',
-      swiper: './src/swiper.js',
-      footer: './src/footer.js',
+      index: './src/index/js/index.js',
+      nav: './src/nav/js/nav.js',
+      testimonials: './src/testimonials/js/swiper.js',
+      footer: './src/footer/js/footer.js',
     },
     output: {
         filename: '[name].js',
@@ -21,7 +22,7 @@ module.exports = {
   },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./src/index.html"
+        template: "./src/index/html/index.html"
       })
     ],
     module: {

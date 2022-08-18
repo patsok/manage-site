@@ -66,9 +66,9 @@ body {
     }
 }
 
-@import "./nav";
-@import "./header";
-@import "./about";
-@import "./testimonials";
-@import "./banner";
-@import "./footer";
+@import "../../nav/styles/nav.scss";
+@import "../../header/styles/header.scss";
+@import "../../about/styles/about.scss";
+@import "../../testimonials/styles/testimonials.scss";
+@import "../../banner/styles/banner.scss";
+@import "../../footer/styles/footer.scss";
