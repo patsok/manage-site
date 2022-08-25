@@ -47,10 +47,11 @@
             position: absolute;
             width: 436px;
             height: 970px;
-            bottom: -10px;
-            left: 240px;
+            bottom: 280px;
+            left: -30px;
             background: $accent-color;
             border-radius: 272px;
+            transform-origin: bottom left;
             transform: rotate(45deg);
             z-index: -1;
         }
