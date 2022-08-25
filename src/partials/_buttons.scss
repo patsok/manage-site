@@ -1,0 +1,28 @@
+.btn{
+    background-color: $primary-color;
+    color: $button-text-color;
+    padding: 12px 32px;
+    border-radius: 22px;
+    box-shadow: 0px 15px 15px -10px $button-shadow-color;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        background: $highlight-color;
+        transition: .2s;
+    }
+
+    &--inverted {
+        background-color: $background-color;
+        color: $primary-color;
+        box-shadow: none;
+
+        &:hover {
+            background-color: $background-color;
+            color: rgba($primary-color, 0.5);
+        }
+    }
+}

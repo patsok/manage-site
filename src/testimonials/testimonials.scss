@@ -1,14 +1,14 @@
-#testimonials {
+.testimonials {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 64px 0px;
     overflow: hidden;
 
-    h2 {
+    .testimonials__title {
         font-weight: 700;
         font-size: clamp(32px, 3vw, 40px);
-        line-height: 44px;
+        line-height: 1.1em;
         letter-spacing: -0.714286px;
         color: $secondary-color;
         padding-bottom: 24px;
@@ -23,49 +23,46 @@
 
         .swiper-slide {
             padding: 0 18px;
+        }
+    }
 
-            .swiper-slide-container {
-                text-align: center;
-                font-size: 18px;
-                height: 256px;
-                max-width: 540px;
-                margin: 0 auto;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                background-color: $testimonials-color;
-                color: $secondary-color;
+    .testimonials-card {
+        text-align: center;
+        font-size: 18px;
+        height: 256px;
+        max-width: 540px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: $testimonials-color;
+        color: $secondary-color;
 
-                .photo {
-                    position: absolute;
-                    top: -40px;
+        .testimonials-card__photo {
+            position: absolute;
+            top: -40px;
+            width: 72px;
+            aspect-ratio: 1/1;
+        }
 
-                    img {
-                        width: 72px;
-                        height: 72px
-                    }
-                }
+        .testimonials-card__name {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.46em;
+            text-align: center;
+            letter-spacing: -0.285714px;
+            padding: 0 21px 19px 21px;
+        }
 
-                h3 {
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 23px;
-                    text-align: center;
-                    letter-spacing: -0.285714px;
-                    padding: 0 21px 19px 21px;
-                }
-
-                p {
-                    font-weight: 400;
-                    font-size: clamp(14px, 3vw, 16px);
-                    line-height: 26px;
-                    text-align: center;
-                    opacity: 0.5;
-                    max-width: 42ch;
-                    padding: 0 21px;
-                }
-            }
+        .testimonials-card__quote {
+            font-weight: 400;
+            font-size: clamp(14px, 3vw, 16px);
+            line-height: 1.62em;
+            text-align: center;
+            opacity: 0.5;
+            max-width: 42ch;
+            padding: 0 21px;
         }
     }
 
@@ -89,23 +86,30 @@
         }
     }
 
-    .button {
-        @extend %button-design;
+    .testimonials__button {
         margin-top: 48px;
     }
-}
 
-@media only screen and (max-width:1400px) {
-    #testimonials {
+    @media only screen and (max-width:1400px) {
         padding-top: 0;
 
         .swiper-pagination {
             display: block;
         }
 
-        .button {
+        .testimonials-card {
+            
+            .testimonials-card__name{
+                margin-top: 32px;
+            }
+
+            .testimonials-card__quote {
+                line-height: 1.86em;
+            }
+        }
+
+        .testimonials__button {
             margin-top: 62px;
         }
     }
-
 }

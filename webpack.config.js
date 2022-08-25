@@ -5,10 +5,10 @@ module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
     entry: {
-      index: './src/index/js/index.js',
-      nav: './src/nav/js/nav.js',
-      testimonials: './src/testimonials/js/swiper.js',
-      footer: './src/footer/js/footer.js',
+      index: './src/index.js',
+      nav: './src/nav/nav.js',
+      testimonials: './src/testimonials/testimonials.js',
+      footer: './src/footer/footer.js',
     },
     output: {
         filename: '[name].js',
@@ -22,7 +22,7 @@ module.exports = {
   },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./src/index/html/index.html"
+        template: "./src/index.html"
       })
     ],
     module: {
@@ -37,6 +37,10 @@ module.exports = {
             {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
             type: 'asset/resource',
+            },
+            {
+              test: /\.(woff|woff2|eot|ttf|otf)$/i,
+              type: 'asset/resource',
             },
             {
               test: /\.html$/i,

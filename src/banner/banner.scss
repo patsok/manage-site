@@ -1,4 +1,4 @@
-#banner {
+.banner {
     background-color: $primary-color;
     overflow: hidden;
 
@@ -7,67 +7,62 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
+    }
 
-        h2 {
-            font-weight: 700;
-            font-size: 40px;
-            line-height: 44px;
-            letter-spacing: -0.714286px;
-            color: #FFFFFF;
-            max-width: 18ch;
-        }
+    .banner__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.1em;
+        letter-spacing: -0.714286px;
+        color: $background-color;
+        max-width: 18ch;
+    }
 
-        .button {
-            @extend %button-design;
+    .banner__btn--inverted {
+        background-color: $background-color;
+        color: $primary-color;
+        box-shadow: none;
+
+        &:hover {
             background-color: $background-color;
-            color: $primary-color;
-            box-shadow: none;
-
-            &:hover {
-                background-color: $background-color;
-                color: rgba($primary-color, 0.5);
-            }
+            color: rgba($primary-color, 0.5);
         }
-        
     }
 
-}
+    .banner__blob {
+        position: absolute;
+        background: $accent-color;
+        opacity: 0.07;
+        z-index: 1;
+        width: 310px;
+        height: 708px;
+        border-radius: 272px;
+        transform: rotate(45deg);
 
-.accent-img {
-    @extend %accent-image;
-    position: absolute;
-    background: $accent-color;
-    opacity: 0.07;
-    z-index: 1;
 
-    &.sub-banner-1 {
-        top: -140px;
-        right: 650px;
+        &--left {
+            top: -140px;
+            right: 700px;
+        }
+
+        &--right {
+            bottom: 0px;
+            right: -320px;
+        }
     }
 
-    &.sub-banner-2 {
-        top: -750px;
-        right: -500px;
-    }
-}
 
-@media only screen and (max-width:1000px) {
-    .banner-container {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 90px;
-        padding-bottom: 90px;
+    @media only screen and (max-width:768px) {
+        .banner-container {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
 
-        h2 {
+        .banner__title {
             margin-bottom: 28px;
-        }
-    }
-
-    .accent-img {
-        &.sub-banner-1 {
-            top: 0px;
-            right: 0;
-            left: -250px;
+            line-height: 1.25em;
         }
     }
 }

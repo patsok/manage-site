@@ -1,62 +1,76 @@
-#header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
     color: $secondary-color;
-    position: relative;
 
-    .header-left {
+    .header__info {
         display: flex;
         flex-direction: column;
         width: 50%;
 
-        h1 {
+        .header__title {
             font-weight: 700;
             font-size: clamp(40px, 4vw, 56px);
-            line-height: clamp(50px, 5vw, 64px);
+            line-height: 1.14em;
             letter-spacing: -1px;
             max-width: 16ch;
             padding-bottom: 16px;
         }
 
-        p {
+        .header__desc {
             font-weight: 400;
             font-size: 16px;
-            line-height: 26px;
+            line-height: 1.62em;
             opacity: 0.5;
             max-width: 32ch;
-            padding-bottom: 40px;
+            margin-bottom: 40px;
+
+            p:not(:last-child){
+                margin-bottom: 16px;
+            }
         }
 
-        .button {
-            @extend %button-design;
+        .header__btn {
             justify-self: start;
             width: fit-content;
         }
     }
 
-    .header-right {
+    .header__image {
         max-width: 540px;
         width: 50%;
-    }
-}
+        position: relative;
 
-@media only screen and (max-width:768px) {
-    #header {
+        .header__blob {
+            position: absolute;
+            width: 436px;
+            height: 970px;
+            bottom: -10px;
+            left: 240px;
+            background: $accent-color;
+            border-radius: 272px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
         text-align: center;
         flex-direction: column-reverse;
         padding-top: 32px;
 
-        .header-left {
+        .header__info {
             align-items: center;
             width: 100%;
 
-            .button {
+            .header__button {
                 align-self: center;
             }
         }
 
-        .header-right {
+        .header__image {
             width: 100%;
         }
     }

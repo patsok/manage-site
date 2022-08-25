@@ -1,22 +1,26 @@
-#nav {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    align-items: center;
-    color: $secondary-color;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 19px;
-    position: relative;
-    z-index: 50;
+.nav {
+    transition: .2s;
 
-    .logo {
-        grid-area: 1/1/2/2;
+    .nav-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        align-items: center;
+        color: $secondary-color;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1.46em;
+        width: 100%;
+        position: relative;
     }
 
-    .nav-items {
+    .nav__logo {
+        grid-area: 1/1/2/2;
+        padding: 10px 0;
+    }
+
+    .nav__items {
         grid-area: 1/2/2/3;
         justify-self: center;
-        position: relative;
 
         ul {
             display: flex;
@@ -26,6 +30,7 @@
 
             li:hover {
                 opacity: 0.5;
+                transition: .2s;
             }
 
             a {
@@ -34,7 +39,7 @@
             }
         }
 
-        &.nav-mobile {
+        &.nav__items--mobile {
             display: block;
             grid-area: 1/1/1/4;
             position: absolute;
@@ -49,10 +54,11 @@
             border-radius: 4px;
             font-size: 16px;
             font-weight: 700;
-            line-height: 23px;
+            line-height: 1.46em;
             text-align: center;
             letter-spacing: -0.285714px;
             padding: 40px 0;
+            z-index: 50;
 
             ul {
                 display: flex;
@@ -61,96 +67,65 @@
         }
     }
 
-    .button {
+    .nav__shadow {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%);
+        z-index: 25;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    .nav__btn {
         grid-area: 1/3/2/4;
         justify-self: end;
-        @extend %button-design;
     }
 
-    .hidden,
-    .mobile-hidden {
+    .nav-hamburger--hidden {
         display: none;
     }
-}
 
-.gradient {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: 1000px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%);
-    z-index: 25;
-}
+    .hamburger__item--is-hidden {
+        display: none;
+    }
 
-@media only screen and (max-width:1000px) {
-    #nav {
+    &.nav--sticky {
+        position: sticky;
+        background-color: $background-color;
+        top: 0px;
+        z-index: 10;
+        box-shadow: 0px 8px 30px -26px rgba($secondary-color, .5);
+        transition: .2s;
+    }
 
-        .hamburger {
+    @media only screen and (max-width:1000px) {
+        .nav-hamburger {
             display: flex;
             cursor: pointer;
             grid-area: 1/3/2/4;
             justify-self: end;
-            z-index: 40;
+            z-index: 50;
 
-            img {
+            .hamburger__item {
                 width: 25px;
                 height: 25px;
             }
         }
 
-        .close-button {
-            display: flex;
-            justify-self: end;
-            grid-area: 1/3/2/4;
-            z-index: 40;
-            cursor: pointer;
-
-            img {
-                width: 25px;
-                height: 25px;
-            }
-        }
-
-        .nav-items,
-        .button,
-        .mobile-hidden {
+        .nav__items,
+        .nav__btn {
             display: none;
         }
     }
 }
 
-
-.accent {
-    position: relative;
-
-    .overflow-wrap {
-        position: absolute;
-        width: 100%;
-        height: 1000px;
-        overflow: hidden;
-
-        .accent-img {
-            position: relative;
-            @extend %accent-image;
-
-            &.sub-nav {
-                opacity: 1;
-                left: clamp(300px, 68vw, 1200px);
-                top: -250px;
-                z-index: -5;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width:768px) {
-    .accent .overflow-wrap .accent-img {
-        width: 244px;
-        height: 542px;
-
-        &.sub-nav {
-            top: -100px;
-            left: clamp(150px, 40vw, 300px);
-        }
-    }
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+    width: calc(100% - var(--scrollbar-width));
 }

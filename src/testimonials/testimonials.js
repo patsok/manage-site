@@ -7,34 +7,6 @@ import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 Swiper.use([Navigation, Pagination, Autoplay]);
 
-// var swiper = new Swiper(".swiper", {
-//     loop: true,
-//     // speed: 5000,
-//     // autoplay: {
-//     //   delay: 1000,
-//     // },
-//     centeredSlides: false,
-//     initialSlide: -1,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-
-//     slidesPerView: 3,
-//     spaceBetween: 500,
-//     // breakpoints: {
-//     //   768: {
-//     //     slidesPerView: 1,
-//     //     spaceBetween: 300,
-
-//     //   },
-//     //   1024: {
-//     //     slidesPerView: 3,
-//     //     spaceBetween: 300,
-//     //   },
-//     // },
-// });
-
 var swiper = new Swiper('.swiper-container', {
   loop: true,
     speed: 1000,
