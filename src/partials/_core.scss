@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 [class$="container"] {
     $padding-lr: clamp(24px,5vw,72px);
     padding: 60px $padding-lr;
