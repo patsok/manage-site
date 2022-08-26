@@ -12,6 +12,7 @@ var swiper = new Swiper('.swiper-container', {
     speed: 1000,
     autoplay: {
       delay: 3000,
+      disableOnInteraction: false
     },
   centeredSlides: true,
   loop: true,

@@ -11,6 +11,8 @@
         line-height: 1.46em;
         width: 100%;
         position: relative;
+        padding-top: 56px;
+        padding-bottom: 40px;
     }
 
     .nav__logo {
@@ -98,13 +100,17 @@
     &.nav--sticky {
         position: sticky;
         background-color: $background-color;
-        top: 0px;
-        z-index: 10;
+        top: -20px;
+        z-index: 15;
         box-shadow: 0px 8px 30px -26px rgba($secondary-color, .5);
         transition: .2s;
     }
 
     @media only screen and (max-width:1000px) {
+        .nav-container{
+            padding-bottom: 20px;
+        }
+
         .nav-hamburger {
             display: flex;
             cursor: pointer;
@@ -121,6 +127,9 @@
         .nav__items,
         .nav__btn {
             display: none;
+        }
+        &.nav--sticky{
+            top: -30px
         }
     }
 }
