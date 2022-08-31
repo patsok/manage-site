@@ -28,7 +28,9 @@ const navController = (()=>{
         openButton.classList.toggle('hamburger__item--is-hidden');
         closeButton.classList.toggle('hamburger__item--is-hidden');
         mobileNav.classList.toggle('nav__items--mobile');
+        mobileNav.classList.toggle('nav__items--visible');
         background.classList.toggle('nav__shadow--hidden');
+        background.classList.toggle('nav__shadow--visible');
         body.classList.toggle('stop-scrolling');
     }
 
