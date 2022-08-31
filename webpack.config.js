@@ -6,9 +6,9 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: {
       index: './src/index.js',
-      nav: './src/nav/nav.js',
-      testimonials: './src/testimonials/testimonials.js',
-      footer: './src/footer/footer.js',
+      nav: './src/_sections/nav/nav.js',
+      testimonials: './src/_sections/testimonials/testimonials.js',
+      footer: './src/_sections/footer/footer.js',
     },
     output: {
         filename: '[name].js',

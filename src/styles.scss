@@ -1,9 +1,29 @@
-@use './partials/variables' as *;
-@import './partials/buttons';
-@import './partials/core';
-@import "./nav/nav.scss";
-@import "./header/header.scss";
-@import "./about/about.scss";
-@import "./testimonials/testimonials.scss";
-@import "./banner/banner.scss";
-@import "./footer/footer.scss";
+@use './sass/variables' as *;
+@import './sass/buttons';
+@import "./_sections/nav/nav.scss";
+@import "./_sections/header/header.scss";
+@import "./_sections/about/about.scss";
+@import "./_sections/testimonials/testimonials.scss";
+@import "./_sections/banner/banner.scss";
+@import "./_sections/footer/footer.scss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack;
+    overflow-x: hidden;
+}
+
+
+[class$="container"] {
+    $padding-lr: clamp(24px,5vw,72px);
+    padding: 60px $padding-lr;
+    margin: 0 auto;
+    max-width: calc(1110px + 2 * $padding-lr);
+}
