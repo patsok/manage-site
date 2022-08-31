@@ -20,7 +20,7 @@ body {
     contain: paint;
 }
 
-[class$="container"] {
+[class$="-container"], [class*="-container "]:not([class*="swiper"]) {
     $padding-lr: clamp(24px,5vw,72px);
     padding: 60px $padding-lr;
     margin: 0 auto;

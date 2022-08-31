@@ -1,5 +1,5 @@
 .banner {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     overflow: hidden;
 
     .banner-container {
@@ -14,24 +14,24 @@
         font-size: 40px;
         line-height: 1.1em;
         letter-spacing: -0.714286px;
-        color: $background-color;
+        color: var(--background-color);
         max-width: 18ch;
     }
 
     .banner__btn--inverted {
-        background-color: $background-color;
-        color: $primary-color;
+        background-color: var(--background-color);
+        color: var(--primary-color);
         box-shadow: none;
 
         &:hover {
-            background-color: $background-color;
-            color: rgba($primary-color, 0.5);
+            background-color: var(--background-color);
+            color: rgba(var(--primary-color), 0.5);
         }
     }
 
     .banner__blob {
         position: absolute;
-        background: $accent-color;
+        background: var(--accent-color);
         opacity: 0.07;
         z-index: 1;
         width: 310px;

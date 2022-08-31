@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    color: $secondary-color;
+    color: var(--secondary-color);
 
     .header-info {
         display: flex;
@@ -27,7 +27,7 @@
             max-width: 32ch;
             margin-bottom: 40px;
 
-            p:not(:last-child){
+            p:not(:last-child) {
                 margin-bottom: 16px;
             }
         }
@@ -45,6 +45,7 @@
         flex-wrap: wrap;
         justify-content: center;
         width: 50%;
+        max-width: 550px;
         position: relative;
         $pos: 14px;
 
@@ -54,11 +55,11 @@
             aspect-ratio: 1.1/1;
 
             &--blocks {
-                background-color: $background-color;
+                background-color: var(--background-color);
                 display: flex;
                 flex-wrap: wrap;
-                gap: clamp(10px,3vw,14px);
-                padding: clamp(10px,3vw,16px);
+                gap: clamp(10px, 3vw, 14px);
+                padding: clamp(10px, 3vw, 16px);
             }
         }
 
@@ -66,7 +67,7 @@
             $percent: 60%;
             width: 100%;
             height: calc($percent - $pos / 2);
-            background-color: $testimonials-color;
+            background-color: var(--testimonials-color);
             font-weight: 600;
             border-radius: 4px;
             display: flex;
@@ -80,8 +81,8 @@
             }
 
             &:nth-child(2) {
-                background-color: $primary-color;
-                color: $background-color;
+                background-color: var(--primary-color);
+                color: var(--background-color);
             }
         }
 
@@ -89,9 +90,9 @@
             position: absolute;
             width: 436px;
             height: 970px;
-            bottom: 280px;
-            left: -30px;
-            background: $accent-color;
+            bottom: clamp(225px,25vw,280px);
+            left: clamp(-80px,5vw,-30px);
+            background: var(--accent-color);
             border-radius: 272px;
             transform-origin: bottom left;
             transform: rotate(45deg);
@@ -102,7 +103,10 @@
     @media only screen and (max-width:768px) {
         text-align: center;
         flex-direction: column-reverse;
-        padding-top: 32px;
+        
+        &.header-container{
+            padding-top: 32px;
+        }
 
         .header-info {
             align-items: center;
@@ -115,6 +119,21 @@
 
         .header-image {
             width: 100%;
+            align-self: center;
+
+            .header__blob {
+                bottom: 250px;
+            }
+        }
+    }
+    @media only screen and (max-width:450px){
+        .header-image {
+            .header__blob {
+                width: clamp(244px,70vw,436px);
+                height: clamp(542px,calc(542px + 50vw),970px);
+                bottom: 150px;
+                left: -20px;
+            }
         }
     }
 }

@@ -1,11 +1,11 @@
 .footer {
-    background: $footer-color;
+    background: var(--footer-color);
 
     .footer-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        color: $background-color;
+        color: var(--background-color);
     }
 
     .footer__nav {
@@ -29,10 +29,10 @@
 
             a {
                 text-decoration: none;
-                color: $background-color;
+                color: var(--background-color);
 
                 &:hover {
-                    color: $primary-color;
+                    color: var(--primary-color);
                     transition: .2s;
                 }
             }
@@ -63,12 +63,12 @@
                 font-size: 13px;
                 line-height: 1.46em;
                 letter-spacing: -0.1px;
-                color: $error-color;
+                color: var(--error-color);
                 padding: 16px;
                 border: 1px solid #FFFFFF;
 
                 &:invalid {
-                    border: 1px solid $error-color;
+                    border: 1px solid var(--error-color);
                 }
             }
 
@@ -81,12 +81,12 @@
                 font-size: 10px;
                 line-height: 1.5em;
                 letter-spacing: -0.0769231px;
-                color: $error-color;
+                color: var(--error-color);
             }
         }
 
         .footer__button {
-            border: 1px solid $primary-color;
+            border: 1px solid var(--primary-color);
             box-shadow: none;
             padding: 12px 24px;
         }
@@ -112,7 +112,7 @@
         gap: 13px;
 
         span:hover {
-            color: $primary-color;
+            color: var(--primary-color);
             transition: .2s;
         }
     }
