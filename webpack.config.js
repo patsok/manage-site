@@ -7,7 +7,7 @@ module.exports = {
     entry: {
       index: './src/index.js',
       nav: './src/_sections/nav/nav.js',
-      nav: './src/_sections/header/header.js',
+      header: './src/_sections/header/header.js',
       testimonials: './src/_sections/testimonials/testimonials.js',
       footer: './src/_sections/footer/footer.js',
     },

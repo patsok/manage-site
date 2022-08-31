@@ -26,7 +26,6 @@
     src: url('../src/assets/fonts/BeVietnam-Medium.woff') format('woff');
 }
 
-$font-stack: 'Be Vietnam', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 @font-face {
     font-family: 'font-some';
@@ -36,7 +35,6 @@ $font-stack: 'Be Vietnam', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto
     font-style: normal;
 }
 
-$font-some: 'font-some', 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $primary-color: #F3603C;
 $secondary-color: #242D52;
@@ -47,5 +45,7 @@ $background-color: #FFFFFF;
 $testimonials-color: #FAFAFA;
 $error-color: #F33C3C;
 
-// $button-shadow-color: #FF9F8E;
-// $highlight-color: #F98F75;
+:root{
+    --font-stack: 'Be Vietnam', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-some: 'font-some', 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}

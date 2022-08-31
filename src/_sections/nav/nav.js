@@ -5,11 +5,24 @@ const navController = (()=>{
     const mobileNav = document.querySelector('.nav__items');
     const background = document.querySelector('.nav__shadow')
     const body = document.querySelector("body");
-    const nav = document.querySelector(".nav");
+    const nav = document.querySelector(".nav")
+
+    openButton.addEventListener('click',addNav);
+    closeButton.addEventListener('click',removeNav);
     
-    openButton.addEventListener('click',toggleNav);
-    closeButton.addEventListener('click',toggleNav);
-    
+    function addNav(){
+        history.pushState(null, null, document.URL);
+        toggleNav();
+        const mobileNavLinks = document.querySelectorAll('.nav__items--mobile ul li');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click',toggleNav);
+        });
+    }
+
+    function removeNav(){
+        toggleNav();
+    }
+
     function toggleNav(){
         hamburgerMenu.classList.toggle('hamburger__item--is-hidden');
         openButton.classList.toggle('hamburger__item--is-hidden');
@@ -18,6 +31,13 @@ const navController = (()=>{
         background.classList.toggle('nav__shadow--hidden');
         body.classList.toggle('stop-scrolling');
     }
+
+    window.addEventListener('popstate',(e)=>{
+        const test = document.querySelector('.nav__shadow--hidden');
+        if (test == null){
+            removeNav();
+        }
+    })
     
     window.addEventListener('scroll',setSticky);
     
@@ -25,8 +45,6 @@ const navController = (()=>{
         window.scrollY < 1 ? nav.classList.remove('nav--sticky') : nav.classList.add('nav--sticky');
     }
     
-    body.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.offsetWidth) + 'px');
-
     background.addEventListener('click',(e)=> {
         if (e.target==background) {
             toggleNav()

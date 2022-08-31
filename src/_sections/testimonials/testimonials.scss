@@ -27,6 +27,7 @@
     }
 
     .testimonials-card {
+        user-select: none;
         text-align: center;
         font-size: 18px;
         height: 256px;
@@ -39,14 +40,14 @@
         background-color: $testimonials-color;
         color: $secondary-color;
 
-        .testimonials-card__photo {
+        &__photo {
             position: absolute;
             top: -40px;
             width: 72px;
             aspect-ratio: 1/1;
         }
 
-        .testimonials-card__name {
+        &__name {
             font-weight: 700;
             font-size: 16px;
             line-height: 1.46em;
@@ -55,7 +56,7 @@
             padding: 0 21px 19px 21px;
         }
 
-        .testimonials-card__quote {
+        &__quote {
             font-weight: 400;
             font-size: clamp(14px, 3vw, 16px);
             line-height: 1.62em;
@@ -100,11 +101,11 @@
 
         .testimonials-card {
             
-            .testimonials-card__name{
+            &__name{
                 margin-top: 32px;
             }
 
-            .testimonials-card__quote {
+            &__quote {
                 line-height: 1.86em;
             }
         }

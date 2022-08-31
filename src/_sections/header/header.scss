@@ -5,12 +5,12 @@
     gap: 16px;
     color: $secondary-color;
 
-    .header__info {
+    .header-info {
         display: flex;
         flex-direction: column;
         width: 50%;
 
-        .header__title {
+        &__title {
             font-weight: 700;
             font-size: clamp(40px, 4vw, 56px);
             line-height: 1.14em;
@@ -19,7 +19,7 @@
             padding-bottom: 16px;
         }
 
-        .header__desc {
+        &__desc {
             font-weight: 400;
             font-size: 16px;
             line-height: 1.62em;
@@ -32,13 +32,13 @@
             }
         }
 
-        .header__btn {
+        &__btn {
             justify-self: start;
             width: fit-content;
         }
     }
 
-    .header__image {
+    .header-image {
         justify-self: flex-end;
         align-self: flex-end;
         display: flex;
@@ -48,7 +48,7 @@
         position: relative;
         $pos: 14px;
 
-        .header__chart {
+        &-chart {
             width: 50%;
             filter: drop-shadow(0px 10px 20px rgba(80, 86, 98, 0.03));
             aspect-ratio: 1.1/1;
@@ -62,7 +62,7 @@
             }
         }
 
-        .chart__item {
+        .chart-item {
             $percent: 60%;
             width: 100%;
             height: calc($percent - $pos / 2);
@@ -104,16 +104,16 @@
         flex-direction: column-reverse;
         padding-top: 32px;
 
-        .header__info {
+        .header-info {
             align-items: center;
             width: 100%;
 
-            .header__button {
+            &__btn {
                 align-self: center;
             }
         }
 
-        .header__image {
+        .header-image {
             width: 100%;
         }
     }

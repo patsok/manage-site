@@ -4,13 +4,13 @@
     gap: 32px;
     position: relative;
 
-    .about__info {
+    .about-info {
         width: 50%;
         height: 100%;
         position: sticky;
         top:180px;
 
-        .about__title {
+        &__title {
             font-weight: 700;
             font-size: clamp(30px, 3vw, 40px);
             line-height: 1.1em;
@@ -19,7 +19,7 @@
             max-width: 16ch;
         }
 
-        .about__desc {
+        &__desc {
             font-weight: 400;
             font-size: clamp(14px, 3vw, 16px);
             line-height: 1.62em;
@@ -33,60 +33,61 @@
         }
     }
 
-    .about__cards {
+    .about-cards {
         width: 50%;
+    }
 
-        .card {
-            display: grid;
-            grid-template-columns: 70px 1fr;
+    .card {
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        gap: 28px;
+        padding-bottom: 40px;
+
+        .card-heading {
+            grid-area: 1/1/2/3;
+            display: flex;
+            align-items: center;
             gap: 28px;
-            padding-bottom: 40px;
 
-            .card__heading {
-                grid-area: 1/1/2/3;
-                display: flex;
-                align-items: center;
-                gap: 28px;
-            }
-
-            .card__number {
+            &__number {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: $primary-color;
                 color: $button-text-color;
                 border-radius: 22px;
-                font-family: $font-stack;
+                font-family: var(--font-stack);
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 1.46em;
                 letter-spacing: -0.285714px;
                 padding: 8px 24px;
             }
-
-            .card__title {
+    
+            &__title {
                 grid-area: 1/2/2/3;
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 1.46em;
                 letter-spacing: -0.285714px;
             }
-
-            .card__desc {
-                margin-top: -10px;
-                grid-area: 2/2/3/3;
-                font-weight: 400;
-                font-size: clamp(14px, 3vw, 16px);
-                line-height: 1.62em;
-                opacity: 0.5;
-
-                p:not(:last-child){
-                    margin-bottom: 16px;
-                }
-            }
-
         }
-    }
+
+        .card__desc {
+            margin-top: -10px;
+            grid-area: 2/2/3/3;
+            font-weight: 400;
+            font-size: clamp(14px, 3vw, 16px);
+            line-height: 1.62em;
+            opacity: 0.5;
+
+            p:not(:last-child){
+                margin-bottom: 16px;
+            }
+        }
+
+    }   
+
     .about__blob{
         position: absolute;
         width: 436px;
@@ -102,40 +103,45 @@
     @media only screen and (max-width:768px) {
         flex-direction: column;
         align-items: center;
-        padding: 60px 0;
+        padding: 60px 0 !important;
 
-        .about__info {
+        .about-info {
             width: 100%;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: static;
+            
+            &__title{
+                padding: 0 16px 24px 16px;
+            }
         }
 
-        .about__title{
-            padding: 0 16px 24px 16px;
-        }
-
-        .about__cards {
+        .about-cards {
             width: 100%;
             padding-left: 16px;
+        }
 
-            .card {
-                .card__desc {
-                    grid-area: 2/1/3/3;
-                    padding-right: 16px;
-                    line-height: 200%;
-                }
+        .card {
+            .card__desc {
+                grid-area: 2/1/3/3;
+                padding-right: 16px;
+                line-height: 200%;
+            }
 
-                .card__heading {
-                    padding-right: 16px;
-                    background-color: $accent-color;
-                    gap: 16px;
-                    border-radius: 22px 0 0 22px;
+            .card-heading {
+                padding-right: 16px;
+                background-color: $accent-color;
+                gap: 16px;
+                border-radius: 22px 0 0 22px;
+
+                &__title{
+                    line-height: 1.1em;
                 }
             }
         }
+
         .about__blob{
             width: 170px;
             height: 378px;

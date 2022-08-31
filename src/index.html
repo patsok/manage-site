@@ -15,54 +15,54 @@
             <div class="nav__shadow nav__shadow--hidden"></div>
             <div class="nav__items">
                 <ul>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#product">Product</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                    <li><a href="#community">Community</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Community</a></li>
                 </ul>
             </div>
-            <a href="#" class="nav__btn btn">Get Started</a>
+            <a href="#"><button type="button" class="nav__btn btn">Get Started</button></a>
             <div class="nav-hamburger nav-hamburger--hidden">
                 <img class="hamburger__item hamburger__item--open" src="./assets/img/menu.svg" alt="nav open">
-                <img class="hamburger__item hamburger__item--close hamburger__item--is-hidden" src="./assets/img/close.svg"
-                    alt="nav close">
+                <img class="hamburger__item hamburger__item--close hamburger__item--is-hidden"
+                    src="./assets/img/close.svg" alt="nav close">
             </div>
         </div>
     </div>
     <div class="header header-container">
-        <div class="header__info">
-            <h1 class="header__title">Bring everyone together to build better products.</h1>
-            <div class="header__desc">
+        <div class="header-info">
+            <h1 class="header-info__title">Bring everyone together to build better products.</h1>
+            <div class="header-info__desc">
                 <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team
                     goals in view.</p>
             </div>
-            <a href="#" class="btn header__btn">Get Started</a>
+            <a href="#"><button type="button" class="btn header-info__btn">Get Started</button></a>
         </div>
-        <div class="header__image">
-            <img class="header__chart header__chart--column" src="./header/img/chart1.svg">
-            <img class="header__chart header__chart--pie" src="./header/img/chart2.svg">
-            <div class="header__chart header__chart--blocks">
-                <div class="chart__item"><span id="chart__number--first">89.74%</span></div>
-                <div class="chart__item"><span id="chart__number--second">+1.5%</span></div>
-                <div class="chart__item"><span id="chart__number--third">88.24%</span></div>
+        <div class="header-image">
+            <img class="header-image-chart header-image-chart--column" src="./assets/img/chart1.svg">
+            <img class="header-image-chart header-image-chart--pie" src="./assets/img/chart2.svg">
+            <div class="header-image-chart header-image-chart--blocks">
+                <div class="chart-item"><span id="chart-item__number--first">89.74%</span></div>
+                <div class="chart-item"><span id="chart-item__number--second">+1.5%</span></div>
+                <div class="chart-item"><span id="chart-item__number--third">88.24%</span></div>
             </div>
             <div class="header__blob"></div>
         </div>
     </div>
     <div class="about about-container">
-        <div class="about__info">
-            <h2 class="about__title">What’s different about Manage?</h2>
-            <div class="about__desc">
+        <div class="about-info">
+            <h2 class="about-info__title">What’s different about Manage?</h2>
+            <div class="about-info__desc">
                 <p>Manage provides all the functionality your team needs, without the complexity. Our software is
                     tailor-made for modern digital product teams.</p>
             </div>
         </div>
-        <div class="about__cards">
+        <div class="about-cards">
             <div class="card">
-                <div class="card__heading">
-                    <div class="card__number">01</div>
-                    <h3 class="card__title">Track company-wide progress</h3>
+                <div class="card-heading">
+                    <div class="card-heading__number">01</div>
+                    <h3 class="card-heading__title">Track company-wide progress</h3>
                 </div>
                 <div class="card__desc">
                     <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the
@@ -72,9 +72,9 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card__heading">
-                    <div class="card__number">02</div>
-                    <h3 class="card__title">Advanced built-in reports</h3>
+                <div class="card-heading">
+                    <div class="card-heading__number">02</div>
+                    <h3 class="card-heading__title">Advanced built-in reports</h3>
                 </div>
                 <div class="card__desc">
                     <p>Set internal delivery estimates and track progress toward company goals. Our customisable
@@ -82,9 +82,9 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card__heading">
-                    <div class="card__number">03</div>
-                    <h3 class="card__title">Everything you need in one place</h3>
+                <div class="card-heading">
+                    <div class="card-heading__number">03</div>
+                    <h3 class="card-heading__title">Everything you need in one place</h3>
                 </div>
                 <div class="card__desc">
                     <p>Stop jumping from one service to another to communicate, store files, track tasks and share
@@ -100,7 +100,9 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="swiper-slide-container testimonials-card">
-                        <img class="testimonials-card__photo" src="./assets/img/person-1.png" alt="person photo">
+                        <img class="testimonials-card__photo"
+                            srcset="./assets/img/person-1@1x.png 1x, ./assets/img/person-1@2x.png 2x, ./assets/img/person-1@3x.png 3x"
+                            alt="person photo">
                         <div class="testimonials-card__name">Ali Bravo</div>
                         <div class="testimonials-card__quote">
                             <p>“We have been able to cancel so many other subscriptions since using Manage. There is no
@@ -110,7 +112,9 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide-container testimonials-card">
-                        <img class="testimonials-card__photo" src="./assets/img/person-2.png" alt="person photo">
+                        <img class="testimonials-card__photo"
+                            srcset="./assets/img/person-2@1x.png 1x, ./assets/img/person-2@2x.png 2x, ./assets/img/person-2@3x.png 3x"
+                            alt="person photo">
                         <div class="testimonials-card__name">Richard Watts</div>
                         <div class="testimonials-card__quote">
                             <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I
@@ -120,7 +124,9 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide-container testimonials-card">
-                        <img class="testimonials-card__photo" src="./assets/img/person-3.png" alt="person photo">
+                        <img class="testimonials-card__photo"
+                            srcset="./assets/img/person-3@1x.png 1x, ./assets/img/person-3@2x.png 2x, ./assets/img/person-3@3x.png 3x"
+                            alt="person photo">
                         <div class="testimonials-card__name">Shanai Gough</div>
                         <div class="testimonials-card__quote">
                             <p>“Their software allows us to track, manage and collaborate on our projects from anywhere.
@@ -130,7 +136,9 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="swiper-slide-container testimonials-card">
-                        <img class="testimonials-card__photo" src="./assets/img/person-4.png" alt="person photo">
+                        <img class="testimonials-card__photo"
+                            srcset="./assets/img/person-4@1x.png 1x, ./assets/img/person-4@2x.png 2x, ./assets/img/person-4@3x.png 3x"
+                            alt="person photo">
                         <div class="testimonials-card__name">Anisha Li</div>
                         <div class="testimonials-card__quote">
                             <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on
@@ -141,12 +149,12 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
-        <a href="#" class="btn testimonials__button">Get Started</a>
+        <a href="#"><button type="button" class="btn testimonials__button">Get Started</button></a>
     </div>
     <div class="banner">
         <div class="banner-container">
             <div class="banner__title">Simplify how your team works today.</div>
-            <a href="#" class="btn btn--inverted banner__btn">Get Started</a>
+            <a href="#"><button type="button" class="btn btn--inverted banner__btn">Get Started</button></a>
             <div class="banner__blob banner__blob--left"></div>
             <div class="banner__blob banner__blob--right"></div>
         </div>
@@ -165,7 +173,7 @@
                     <li><a href="#privacy">Privacy Policy</a></li>
                 </ul>
             </div>
-            <div class="footer__form">
+            <div class="footer-form">
                 <form action="#footer">
                     <div class="form-input-field">
                         <label for="input-field__email"></label>

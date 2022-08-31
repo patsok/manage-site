@@ -16,10 +16,9 @@
 }
 
 body {
-    font-family: $font-stack;
-    overflow-x: hidden;
+    font-family: var(--font-stack);
+    contain: paint;
 }
-
 
 [class$="container"] {
     $padding-lr: clamp(24px,5vw,72px);
