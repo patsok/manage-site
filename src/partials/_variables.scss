@@ -2,36 +2,36 @@
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 400;
-    src: url('../src/fonts/BeVietnam-Regular.woff') format('woff');
+    src: url('../src/assets/fonts/BeVietnam-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Be Vietnam';
     font-style: italic;
     font-weight: 400;
-    src: url('../src/fonts/BeVietnam-Italic.woff') format('woff');
+    src: url('../src/assets/fonts/BeVietnam-Italic.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 700;
-    src: url('../src/fonts/BeVietnam-Bold.woff') format('woff');
+    src: url('../src/assets/fonts/BeVietnam-Bold.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Be Vietnam';
     font-style: normal;
     font-weight: 500;
-    src: url('../src/fonts/BeVietnam-Medium.woff') format('woff');
+    src: url('../src/assets/fonts/BeVietnam-Medium.woff') format('woff');
 }
 
 $font-stack: 'Be Vietnam', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 @font-face {
     font-family: 'font-some';
-    src: url('../src/footer/fonts/font-some.woff') format('woff'),
-        url('../src/footer/fonts/font-some.ttf') format('truetype');
+    src: url('../src/assets/fonts/font-some.woff') format('woff'),
+        url('../src/assets/fonts/font-some.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

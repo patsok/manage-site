@@ -1,4 +1,4 @@
-@import './partials/variables';
+@use './partials/variables' as *;
 @import './partials/buttons';
 @import './partials/core';
 @import "./nav/nav.scss";
