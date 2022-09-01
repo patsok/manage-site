@@ -6,15 +6,15 @@
     --point-radius: 22px;
     --card-gap: 28px;
     --card-font-size: 16px;
-    --heading-height: 70px;
     --card-width: calc(100% - var(--section-width));
     width: var(--card-width);
 
     .card {
         display: grid;
-        grid-template-columns: var(--heading-height) 1fr;
+        grid-template-columns: 70px 1fr;
         gap: var(--card-gap);
         padding-bottom: 40px;
+        opacity: 0;
 
         .card-heading {
             grid-area: 1/1/2/3;
@@ -44,6 +44,7 @@
                 letter-spacing: -0.285714px;
             }
         }
+    
 
         .card__desc {
             margin-top: -10px;
@@ -55,6 +56,27 @@
 
             p:not(:last-child) {
                 margin-bottom: 16px;
+            }
+        }
+
+        &:nth-child(2){
+            animation: fade-left .5s ease-out .7s forwards;
+        }
+        &:nth-child(3){
+            animation: fade-left .5s ease-out 1s forwards;
+        }
+        animation: fade-left .5s ease-out .4s forwards;
+
+        @keyframes fade-left {
+            0% {
+                opacity: 0;
+                transform: translateX(150px);
+
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
             }
         }
 
