@@ -1,5 +1,4 @@
 .nav {
-    transition: .2s;
     padding-top: 56px;
     padding-bottom: 16px;
 
@@ -67,43 +66,83 @@
             padding: 40px 0;
             z-index: 50;
 
-            animation: 0.5s fade-in;
+            &.nav__items--visible{
+                animation: 0.5s fade-in forwards;
+            }
+            &.nav__items--hidden{
+                animation: 0.5s fade-out forwards;
+            }
+
 
             @keyframes fade-in {
                 0% {
                     opacity: 0;
                     transform: translateY(150px);
-
                 }
-
                 100% {
                     opacity: 1;
                     transform: translateY(0px);
                 }
             }
 
+            @keyframes fade-out {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(150px);
+                }
+            }
 
             ul {
                 display: flex;
                 flex-direction: column;
             }
         }
+
     }
 
     .nav__shadow {
+        visibility: hidden;
         position: fixed;
-        opacity: 1;
+        opacity: 0;
         top: 0px;
         left: 0px;
         width: 100vw;
-        height: 100vh;
+        height:calc(100vh);
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.33%, rgba(0, 0, 0, 0.599049) 99.79%);
-        z-index: 25;
-        transition: opacity .5s ease-out;
+        z-index: -1;
 
         &--hidden {
-            visibility: hidden;
-            opacity: 0;
+            animation: hid-nav .5s ease-out forwards;
+            z-index: -1;
+        }
+
+        &--visible {
+            animation: show-nav .5s ease-out forwards;
+            z-index: 25;
+        }
+
+        @keyframes show-nav {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+            
+        }
+
+        @keyframes hid-nav {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+            
         }
     }
 
@@ -125,9 +164,13 @@
         position: sticky;
         background-color: var(--background-color);
         top: -40px;
-        z-index: 15;
+        z-index: 30;
         box-shadow: 0px 8px 30px -26px rgba($secondary-color, .5);
         transition: .2s;
+
+        .nav__shadow{
+            mix-blend-mode: exclusion;
+        }
     }
 
     @media only screen and (max-width:1000px) {
@@ -155,10 +198,12 @@
             top: -30px;
             padding-bottom: 10px;
         }
+        .nav__shadow{
+            visibility: visible;
+        }
     }
 }
 
 .stop-scrolling {
-    contain: none;
-    overflow: hidden;
+    overflow-y: hidden;
 }
