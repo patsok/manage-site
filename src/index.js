@@ -1,7 +1,26 @@
 import './styles.scss';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
-AOS.init({
-    once: true,
-});
+// AOS.init({
+//     once: true,
+// });
+
+export function scrollTrigger(selector, options = {}) {
+    let els = document.querySelectorAll(selector)
+    els = Array.from(els)
+    els.forEach(el => {
+        addObserver(el, options)
+    })
+}
+function addObserver(el, options) {
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active')
+                observer.unobserve(entry.target)
+            }
+        })
+    }, options)
+    observer.observe(el)
+}
