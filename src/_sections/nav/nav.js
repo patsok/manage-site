@@ -8,7 +8,6 @@ const navController = (()=>{
     const nav = document.querySelector(".nav")
     const html = document.querySelector("html")
 
-
     openButton.addEventListener('click',addNav);
     closeButton.addEventListener('click',removeNav);
     
@@ -61,8 +60,8 @@ const navController = (()=>{
     });
 
     body.addEventListener('keydown', (e)=>{ 
-        if(!background.classList.contains('nav__shadow--hidden')){
-            e.key == "Backspace" ? toggleNav() : console.log('nope');
+        if(background.classList.contains('nav__shadow--visible')){
+            e.key == "Backspace" ? removeNav() : console.log('nope');
         } 
     });
 
